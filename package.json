@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npm install --save-dev webpack webpack-cli webpack-merge webpack-dev-server html-webpack-plugin style-loader css-loader html-loader babel-loader",
-    "preinit": "mkdir src && cd src && touch index.js style.css template.html",
+    "webpack:install": "npm install --save-dev webpack webpack-cli webpack-merge webpack-dev-server html-webpack-plugin style-loader css-loader html-loader babel-loader",
+    "src:init": "mkdir src && cd src && touch index.js style.css template.html",
     "webpack:init": "touch webpack.common.js webpack.dev.js webpack.prod.js",
     "dev": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
