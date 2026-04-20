@@ -10,7 +10,7 @@
     "webpack:init": "touch webpack.common.js webpack.dev.js webpack.prod.js",
     "dev": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "lint": "npx eslint src/*.js",
+    "lint": "npx eslint src/ --ext",
     "prettier": "npx prettier . --write",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
