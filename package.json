@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "webpack:install": "npm install --save-dev webpack webpack-cli webpack-merge webpack-dev-server html-webpack-plugin style-loader css-loader html-loader babel-loader",
+    "preinstall": "npm install --save-dev webpack webpack-cli webpack-merge webpack-dev-server html-webpack-plugin style-loader css-loader html-loader babel-loader",
+    "eslint:install": "npm init @eslint/config@latest",
     "src:init": "mkdir src && cd src && touch index.js style.css template.html",
     "webpack:init": "touch webpack.common.js webpack.dev.js webpack.prod.js",
     "dev": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
+    "lint": "npx eslint src/*.js",
+    "prettier": "npx prettier . --write",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,10 +27,15 @@
   },
   "homepage": "https://github.com/DefalterXD/Webpack-Template#readme",
   "devDependencies": {
+    "@eslint/js": "^9.39.4",
     "babel-loader": "^10.1.1",
     "css-loader": "^7.1.4",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^17.5.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.6",
+    "prettier": "3.8.3",
     "style-loader": "^4.0.0",
     "webpack": "^5.105.4",
     "webpack-cli": "^7.0.2",
